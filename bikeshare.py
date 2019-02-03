@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
+CITIES_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
@@ -48,7 +48,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    df = pd.read_csv(CITY_DATA[city])
+    df = pd.read_csv(CITIES_DATA[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -184,6 +184,14 @@ def main():
                   x += 5
                   y += 5
                   response = input('Display 5 rows?: yes or no?  ')
+                starting_row = 0
+                ending_row = 5
+                response = input('Display 5 rows? yes or no? ')
+                while response.lower() == 'yes':
+                  print((df.iloc[starting_row:ending_row]))
+                  starting_row += 5
+                  ending_row += 5
+                  response = input('Display 5 rows? yes or no?  ')
 
                 restart = input('\nWould you like to restart?: Enter yes or no.\n')
                 if restart.lower() != 'yes':
