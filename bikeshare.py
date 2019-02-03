@@ -178,14 +178,14 @@ def main():
                 functions(df)  
                 x = 0
                 y = 5
-                response = input('Display 5 rows? yes or no? ')
+                response = input('Display 5 rows?: yes or no? ')
                 while response.lower() == 'yes':
                   print((df.iloc[x:y]))
                   x += 5
                   y += 5
-                  response = input('Display 5 rows? yes or no?  ')
+                  response = input('Display 5 rows?: yes or no?  ')
 
-                restart = input('\nWould you like to restart? Enter yes or no.\n')
+                restart = input('\nWould you like to restart?: Enter yes or no.\n')
                 if restart.lower() != 'yes':
                   break
 
