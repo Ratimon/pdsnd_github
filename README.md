@@ -1,4 +1,4 @@
-#Git
+#Git - version control
 
 ### Date created
 Include the date you created this project and README file.
