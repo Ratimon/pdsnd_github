@@ -176,13 +176,13 @@ def main():
         for functions in [time_stats,station_stats,trip_duration_stats,user_stats]: 
             if (display_data()):
                 functions(df)  
-                x = 0
-                y = 5
+                starting_row = 0
+                ending_row = 5
                 response = input('Display 5 rows? yes or no? ')
                 while response.lower() == 'yes':
-                  print((df.iloc[x:y]))
-                  x += 5
-                  y += 5
+                  print((df.iloc[starting_row:ending_row]))
+                  starting_row += 5
+                  ending_row += 5
                   response = input('Display 5 rows? yes or no?  ')
 
                 restart = input('\nWould you like to restart? Enter yes or no.\n')
